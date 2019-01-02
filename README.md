@@ -14,7 +14,7 @@ a lie detection point of view, together with some useful descriptive plots of bl
 ## OpenCV and Facial Landmarks
 The implementation which follows is based on the tutorial from the blog Pyimagesearch (see Rosebrock) which, in turn, takes as its starting point the work of Soukupova and Cech for the the metric called eye aspect ratio (EAR). The 68 facial landmarks are based on the iBUG 300-W dataset (see Sagonas et al. and figure below on the left), which the dlib facial landmark predictor was trained on.
 
-### Eye Aspect Ration (EAR)
+### Eye Aspect Ratio (EAR)
 For every video frame, the eye landmarks (landmarks [37,42] and [43,48] for left and rigth eye respectively) are detected. The eye aspect ratio (EAR) between height and width of the eye is computed, following the work of Soukupova and Cech.
 
 <p align="center"> 
@@ -33,12 +33,12 @@ See the attached file "Report_final.pdf" to see the details.
 The SVM blink detector was firstly validated on some videos from the iBUG 300-W dataset and its performance was therefore compared with the OpenCV blink detector (see Rosebrock). The aim of this stage was to test the two system’s blink detection ability, independently of variations in pose, expression, illumination, background, occlusion, and image quality. 
 
 Following what has been done in Sagonas et al., the following three scenarios have been considered:
-- Scenario 1: A number of testing videos will be of people recorded in well-lit conditions displaying arbitrary expressions in various head poses. This scenario aims to evaluate algorithms that could be suitable for facial motion analysis in laboratory and naturalistic well-lit conditions.
-- Scenario 2: A number of testing videos will be of people recorded in unconstrained conditions, displaying arbitrary expressions in various head poses but without large occlusions. This scenario aims to evaluate algorithms that could be suitable for facial motion analysis in real-world human-computer interaction applications.
-- Scenario 3: A number of testing videos will be of people recorded in completely unconstrained conditions including the illumination conditions, occlusions, makeup, expression, head pose, etc. This scenario aims to assess the performance of facial landmark tracking in arbitrary conditions.
+- Scenario 1 (Top): A number of testing videos will be of people recorded in well-lit conditions displaying arbitrary expressions in various head poses. This scenario aims to evaluate algorithms that could be suitable for facial motion analysis in laboratory and naturalistic well-lit conditions.
+- Scenario 2 (Middle): A number of testing videos will be of people recorded in unconstrained conditions, displaying arbitrary expressions in various head poses but without large occlusions. This scenario aims to evaluate algorithms that could be suitable for facial motion analysis in real-world human-computer interaction applications.
+- Scenario 3 (Bottom): A number of testing videos will be of people recorded in completely unconstrained conditions including the illumination conditions, occlusions, makeup, expression, head pose, etc. This scenario aims to assess the performance of facial landmark tracking in arbitrary conditions.
 
 <p align="center"> 
-<img src="https://github.com/rmenoli/Eye-blinking-SVM/blob/master/images/Validation_Scenarios.png" width="350"/>
+<img src="https://github.com/rmenoli/Eye-blinking-SVM/blob/master/images/Validation_Scenarios.png" width="350"/> <img src="https://github.com/rmenoli/Eye-blinking-SVM/blob/master/images/Validation_Experiments.png" width="350"/>
 </p>
 
 ## References
