@@ -45,7 +45,7 @@ Following what has been done in Sagonas et al., the following three scenarios ha
 Secondly, the validation procedure was done also for videos of friends, relatives and acquaintances; the results for two videos are summarized below. We can notice that also for new and longer videos (the lengths are 3:45 and 7:30 minutes, respectively for Bianca at the top and Filippo at the bottom) the validation procedure shows a significant improvement in the SVM blink detector in terms of both precision and recall, especially when occlusions occur (i.e. Filippo wears glasses). Moreover, the overall SVM classifier performance is better in Filippo, due to the frame rate the video was recorded at: Bianca was recorded at 14 fps, while Filippo at 29 fps. The SVM blink detector was trained with 30 fps videos, so this difference in performances was expected, but unavoidable.
 
 <p align="center"> 
-<img src="https://github.com/rmenoli/Eye-blinking-SVM/blob/master/images/Validation_Experiments.png" width="350"/>
+<img src="https://github.com/rmenoli/Eye-blinking-SVM/blob/master/images/Validation_Experiments.png" width="500"/>
 </p>
 
 ## Is the Person Lying?
@@ -59,7 +59,7 @@ On the top, there is a real-time counter of blinks detected by the OpenCV and th
 The last graph keeps track of the blink rate throughout the whole video and denotes the current frame by a vertical black line. This feature is very useful when looking at these empirical measures from a lie detection point of view.
 
 <p align="center"> 
-<img src="https://github.com/rmenoli/Eye-blinking-SVM/blob/master/images/Interface.png" width="350"/>
+<img src="https://github.com/rmenoli/Eye-blinking-SVM/blob/master/images/Interface.png" width="500"/>
 </p>
 
 ### Experimental Setting
@@ -71,7 +71,7 @@ The structure of the recorded videos is organized in 5 periods of the same lengt
 5. Baseline: the subject is at rest, the instruction is “Look at the screen”.
 
 <p align="center"> 
-<img src="https://github.com/rmenoli/Eye-blinking-SVM/blob/master/images/Experiment.png" width="350"/>
+<img src="https://github.com/rmenoli/Eye-blinking-SVM/blob/master/images/Experiment.png" width="500"/>
 </p>
 
 It was observed a significant difference both in the blink rate and in the average inter-blink interval during the 5 periods. The blink rate during both target periods is higher than in the baseline periods, due to the fact that the mean blink rate at rest is 17 blinks/minute, while during conversation it increases to 26 blinks/minute (see Bentivoglio et al.). 
