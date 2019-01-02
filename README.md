@@ -54,7 +54,9 @@ Secondly, we decided an experimental setting that could significantly highlight 
 
 ### Video Interface
 Given a video as an input, firstly the program performs a pre-processing of the raw-data (i.e. for each frame, it detects facial landmarks, computes and normalizes the EAR values and arranges data in the form of table 1), secondly the already-trained SVM classifier computes the previsions (0 = opened eye, 1 = closed eye), then the sequence of 0’s and 1’s is converted into blinks / no blinks based on the empirical rule describe in 3.3, and finally the program returns, for each frame, an output like those showed in table 7.
+
 On the top, there is a real-time counter of blinks detected by the OpenCV and the SVM detectors up to that frame. Lower, it is shown the instant blink rate, which for frame x at instant t (in seconds) is computed considering the frames belonging to the interval (t-20; t). This 20 seconds time window is then plotted in the graph below, together with the normalized EAR value (blue line) for each frame belonging to the window; a red dot is shown corresponding to the frame at which the blink was detected.
+
 The last graph keeps track of the blink rate throughout the whole video and denotes the current frame by a vertical black line. This feature is very useful when looking at these empirical measures from a lie detection point of view.
 
 <p align="center"> 
