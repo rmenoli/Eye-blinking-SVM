@@ -38,7 +38,7 @@ Following what has been done in Sagonas et al., the following three scenarios ha
 - Scenario 3 (Bottom): A number of testing videos will be of people recorded in completely unconstrained conditions including the illumination conditions, occlusions, makeup, expression, head pose, etc. This scenario aims to assess the performance of facial landmark tracking in arbitrary conditions.
 
 <p align="center"> 
-<img src="https://github.com/rmenoli/Eye-blinking-SVM/blob/master/images/Validation_Scenarios.png" width="350"/>
+<img src="https://github.com/rmenoli/Eye-blinking-SVM/blob/master/images/Validation_Scenarios.png" width="500"/>
 </p>
 
 ### Validation on self-produced videos
@@ -78,6 +78,14 @@ It was observed a significant difference both in the blink rate and in the avera
 
 However, for both videos there is a significant difference in the blink rate while the person is lying and while he/she is telling the truth, independently from the order of the target periods: not only the mean blink rate is lower while the person is lying, but also the mean inter-blink interval is lower when the subject is telling the truth.
 
+## Conclusions
+This work has firstly developed a robust and efficient blink detector, based on the eye aspect ratio (EAR) value given as input to a fully-trained and validated SVM machine learning model. The performance was much higher than the existing OpenCV blink detector, under many video qualities and conditions. 
+
+Secondly we used this blink detector to analyse all possible variations of some empirical measures in different subjects, during the baseline and the target period. In order to do this, we have developed a video interface embedded with some live statistical measures.
+
+Finally, we have tried to analyse from a descriptive point of view the data displayed, with the intent to find out some analogies with the current research in the topic of lie detection and eye blinking. Due to the type of experimental design, it was not feasible to compare our results with those obtained for example in Leal and Vrij: in our experiment, the subject’s activity was not the same during the baseline and the target period. Talking is a factor that definitly influences eye blinking. However, it was found a significant effect of the unexpected questions on the blink rate, especially when lying.
+We believe that a more accurate experimental design and a possible live blink detection implementation could lead to a complete lie detector, which classifies a subject or a part
+of his speech as a lie.
 ## References
 - Anna Rita Bentivoglio, Susan B Bressman, Emanuele Cassetta, Donatella Carretta, Pietro Tonali, and Alberto Albanese. Analysis of blink rate patterns in normal subjects. Movement Disorders, 12(6):1028–1034, 1997.
 - Sharon Leal and Aldert Vrij. Blinking during and after lying. Journal of Nonverbal Behavior, 32(4):187–194, 2008.
