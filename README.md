@@ -73,7 +73,13 @@ The structure of the recorded videos is organized in 5 periods of the same lengt
 <p align="center"> 
 <img src="https://github.com/rmenoli/Eye-blinking-SVM/blob/master/images/Experiment.png" width="350"/>
 </p>
+
+It was observed a significant difference both in the blink rate and in the average inter-blink interval during the 5 periods. The blink rate during both target periods is higher than in the baseline periods, due to the fact that the mean blink rate at rest is 17 blinks/minute, while during conversation it increases to 26 blinks/minute (see Bentivoglio et al.). 
+
+However, for both videos there is a significant difference in the blink rate while the person is lying and while he/she is telling the truth, independently from the order of the target periods: not only the mean blink rate is lower while the person is lying, but also the mean inter-blink interval is lower when the subject is telling the truth.
+
 ## References
+- Anna Rita Bentivoglio, Susan B Bressman, Emanuele Cassetta, Donatella Carretta, Pietro Tonali, and Alberto Albanese. Analysis of blink rate patterns in normal subjects. Movement Disorders, 12(6):1028–1034, 1997.
 - Sharon Leal and Aldert Vrij. Blinking during and after lying. Journal of Nonverbal Behavior, 32(4):187–194, 2008.
 - Adrian Rosebrock. Eye blink detection with opencv, python, and dlib. URL https://www.pyimagesearch.com/2017/04/24/eye-blink-detection-opencv-python-dlib/.
 - Christos Sagonas, Georgios Tzimiropoulos, Stefanos Zafeiriou, and Maja Pantic. 300 faces in-the-wild challenge: The first facial landmark localization challenge. In Proceedings of the IEEE International Conference on Computer Vision Workshops, pages 397–403, 2013.
