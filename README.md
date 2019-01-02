@@ -38,7 +38,13 @@ Following what has been done in Sagonas et al., the following three scenarios ha
 - Scenario 3 (Bottom): A number of testing videos will be of people recorded in completely unconstrained conditions including the illumination conditions, occlusions, makeup, expression, head pose, etc. This scenario aims to assess the performance of facial landmark tracking in arbitrary conditions.
 
 <p align="center"> 
-<img src="https://github.com/rmenoli/Eye-blinking-SVM/blob/master/images/Validation_Scenarios.png" width="350"/> <img src="https://github.com/rmenoli/Eye-blinking-SVM/blob/master/images/Validation_Experiments.png" width="350"/>
+<img src="https://github.com/rmenoli/Eye-blinking-SVM/blob/master/images/Validation_Scenarios.png" width="350"/>
+</p>
+
+Secondly, the validation procedure was done also for videos of friends, relatives and acquaintances; the results for two videos are summarized below. We can notice that also for new and longer videos (the lengths are 3:45 and 7:30 minutes, respectively for Bianca at the top and Filippo at the bottom) the validation procedure shows a significant improvement in the SVM blink detector in terms of both precision and recall, especially when occlusions occur (i.e. Filippo wears glasses). Moreover, the overall SVM classifier performance is better in Filippo, due to the frame rate the video was recorded at: Bianca was recorded at 14 fps, while Filippo at 29 fps. The SVM blink detector was trained with 30 fps videos, so this difference in performances was expected, but unavoidable.
+
+<p align="center"> 
+<img src="https://github.com/rmenoli/Eye-blinking-SVM/blob/master/images/Validation_Experiments.png" width="350"/>
 </p>
 
 ## References
