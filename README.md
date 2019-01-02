@@ -29,7 +29,7 @@ Therefore, following what has been proposed by Soukupova and Cech, we built a cl
 ### Training
 See the attached file "Report_final.pdf" to see the details.
 
-### Validation
+### Validation on different video conditions
 The SVM blink detector was firstly validated on some videos from the iBUG 300-W dataset and its performance was therefore compared with the OpenCV blink detector (see Rosebrock). The aim of this stage was to test the two system’s blink detection ability, independently of variations in pose, expression, illumination, background, occlusion, and image quality. 
 
 Following what has been done in Sagonas et al., the following three scenarios have been considered:
@@ -41,13 +41,40 @@ Following what has been done in Sagonas et al., the following three scenarios ha
 <img src="https://github.com/rmenoli/Eye-blinking-SVM/blob/master/images/Validation_Scenarios.png" width="350"/>
 </p>
 
+### Validation on self-produced videos
 Secondly, the validation procedure was done also for videos of friends, relatives and acquaintances; the results for two videos are summarized below. We can notice that also for new and longer videos (the lengths are 3:45 and 7:30 minutes, respectively for Bianca at the top and Filippo at the bottom) the validation procedure shows a significant improvement in the SVM blink detector in terms of both precision and recall, especially when occlusions occur (i.e. Filippo wears glasses). Moreover, the overall SVM classifier performance is better in Filippo, due to the frame rate the video was recorded at: Bianca was recorded at 14 fps, while Filippo at 29 fps. The SVM blink detector was trained with 30 fps videos, so this difference in performances was expected, but unavoidable.
 
 <p align="center"> 
 <img src="https://github.com/rmenoli/Eye-blinking-SVM/blob/master/images/Validation_Experiments.png" width="350"/>
 </p>
 
+## Is the Person Lying?
+In order to determine whether there could be some empirical measures (e.g. blink rate and EAR) which could be helpful for lie detection, at first, we built an interface containing the video, some descriptive statistics and two real-time plots. 
+
+Secondly, we decided an experimental setting that could significantly highlight differences in those empirical measures among different periods (i.e. baseline, target period and target offset), taking the work of Leal and Vrij as reference.
+
+### Video Interface
+Given a video as an input, firstly the program performs a pre-processing of the raw-data (i.e. for each frame, it detects facial landmarks, computes and normalizes the EAR values and arranges data in the form of table 1), secondly the already-trained SVM classifier computes the previsions (0 = opened eye, 1 = closed eye), then the sequence of 0’s and 1’s is converted into blinks / no blinks based on the empirical rule describe in 3.3, and finally the program returns, for each frame, an output like those showed in table 7.
+On the top, there is a real-time counter of blinks detected by the OpenCV and the SVM detectors up to that frame. Lower, it is shown the instant blink rate, which for frame x at instant t (in seconds) is computed considering the frames belonging to the interval (t-20; t). This 20 seconds time window is then plotted in the graph below, together with the normalized EAR value (blue line) for each frame belonging to the window; a red dot is shown corresponding to the frame at which the blink was detected.
+The last graph keeps track of the blink rate throughout the whole video and denotes the current frame by a vertical black line. This feature is very useful when looking at these empirical measures from a lie detection point of view.
+
+<p align="center"> 
+<img src="https://github.com/rmenoli/Eye-blinking-SVM/blob/master/images/Interface.png" width="350"/>
+</p>
+
+### Experimental Setting
+The structure of the recorded videos is organized in 5 periods of the same length, where the person follows the instructions13 reported on the screen:
+1. Baseline: the subject is at rest, the instruction is “Look at the screen”.
+2. Target Period: the subject is telling the truth, the istruction is “We ask you to tell in detail what you did last week”.
+3. Baseline: the subject is at rest, the instruction is “Look at the screen”.
+4. Target Period: the subject is lying14, the istruction is “We ask you to tell in detail what you did last week, telling a lie (without any truth)”.
+5. Baseline: the subject is at rest, the instruction is “Look at the screen”.
+
+<p align="center"> 
+<img src="https://github.com/rmenoli/Eye-blinking-SVM/blob/master/images/Experiment.png" width="350"/>
+</p>
 ## References
+- Sharon Leal and Aldert Vrij. Blinking during and after lying. Journal of Nonverbal Behavior, 32(4):187–194, 2008.
 - Adrian Rosebrock. Eye blink detection with opencv, python, and dlib. URL https://www.pyimagesearch.com/2017/04/24/eye-blink-detection-opencv-python-dlib/.
 - Christos Sagonas, Georgios Tzimiropoulos, Stefanos Zafeiriou, and Maja Pantic. 300 faces in-the-wild challenge: The first facial landmark localization challenge. In Proceedings of the IEEE International Conference on Computer Vision Workshops, pages 397–403, 2013.
 - T Soukupova and Jan Cech. Real-time eye blink detection using facial landmarks. In 21st Computer Vision Winter Workshop (CVWW 2016), pages 1–8, 2016.
