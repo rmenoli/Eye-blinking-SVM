@@ -53,9 +53,11 @@ In order to determine whether there could be some empirical measures (e.g. blink
 Secondly, we decided an experimental setting that could significantly highlight differences in those empirical measures among different periods (i.e. baseline, target period and target offset), taking the work of Leal and Vrij as reference.
 
 ### Video Interface
-Given a video as an input, firstly the program performs a pre-processing of the raw-data (i.e. for each frame, it detects facial landmarks, computes and normalizes the EAR values and arranges data in the form of table 1), secondly the already-trained SVM classifier computes the previsions (0 = opened eye, 1 = closed eye), then the sequence of 0’s and 1’s is converted into blinks / no blinks based on the empirical rule describe in 3.3, and finally the program returns, for each frame, an output like those showed in table 7.
+Given a video as an input, firstly the program performs a pre-processing of the raw-data (i.e. for each frame, it detects facial landmarks, computes and normalizes the EAR values and arranges data in the form of table 1), secondly the already-trained SVM classifier computes the previsions (0 = opened eye, 1 = closed eye), then the sequence of 0’s and 1’s is converted into blinks / no blinks (see "Report_final.pdf" for more details), and finally the program returns, for each frame, an output like those showed below.
 
-On the top, there is a real-time counter of blinks detected by the OpenCV and the SVM detectors up to that frame. Lower, it is shown the instant blink rate, which for frame x at instant t (in seconds) is computed considering the frames belonging to the interval (t-20; t). This 20 seconds time window is then plotted in the graph below, together with the normalized EAR value (blue line) for each frame belonging to the window; a red dot is shown corresponding to the frame at which the blink was detected.
+On the top, there is a real-time counter of blinks detected by the OpenCV and the SVM detectors up to that frame. Lower, it is shown the instant blink rate, which for frame x at instant t (in seconds) is computed considering the frames belonging to the interval (t-20; t).
+
+This 20 seconds time window is then plotted in the graph below, together with the normalized EAR value (blue line) for each frame belonging to the window; a red dot is shown corresponding to the frame at which the blink was detected.
 
 The last graph keeps track of the blink rate throughout the whole video and denotes the current frame by a vertical black line. This feature is very useful when looking at these empirical measures from a lie detection point of view.
 
@@ -64,11 +66,11 @@ The last graph keeps track of the blink rate throughout the whole video and deno
 </p>
 
 ### Experimental Setting
-The structure of the recorded videos is organized in 5 periods of the same length, where the person follows the instructions13 reported on the screen:
+The structure of the recorded videos is organized in 5 periods of the same length, where the person follows the instructions reported on the screen:
 1. Baseline: the subject is at rest, the instruction is “Look at the screen”.
 2. Target Period: the subject is telling the truth, the istruction is “We ask you to tell in detail what you did last week”.
 3. Baseline: the subject is at rest, the instruction is “Look at the screen”.
-4. Target Period: the subject is lying14, the istruction is “We ask you to tell in detail what you did last week, telling a lie (without any truth)”.
+4. Target Period: the subject is lying, the instruction is “We ask you to tell in detail what you did last week, telling a lie (without any truth)”.
 5. Baseline: the subject is at rest, the instruction is “Look at the screen”.
 
 <p align="center"> 
@@ -84,7 +86,10 @@ This work has firstly developed a robust and efficient blink detector, based on 
 
 Secondly we used this blink detector to analyse all possible variations of some empirical measures in different subjects, during the baseline and the target period. In order to do this, we have developed a video interface embedded with some live statistical measures.
 
-Finally, we have tried to analyse from a descriptive point of view the data displayed, with the intent to find out some analogies with the current research in the topic of lie detection and eye blinking. Due to the type of experimental design, it was not feasible to compare our results with those obtained for example in Leal and Vrij: in our experiment, the subject’s activity was not the same during the baseline and the target period. Talking is a factor that definitly influences eye blinking. However, it was found a significant effect of the unexpected questions on the blink rate, especially when lying.
+Finally, we have tried to analyse from a descriptive point of view the data displayed, with the intent to find out some analogies with the current research in the topic of lie detection and eye blinking.
+
+Due to the type of experimental design, it was not feasible to compare our results with those obtained for example in Leal and Vrij: in our experiment, the subject’s activity was not the same during the baseline and the target period. Talking is a factor that definitly influences eye blinking. However, it was found a significant effect of the unexpected questions on the blink rate, especially when lying.
+
 We believe that a more accurate experimental design and a possible live blink detection implementation could lead to a complete lie detector, which classifies a subject or a part
 of his speech as a lie.
 ## References
