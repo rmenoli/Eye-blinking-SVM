@@ -14,8 +14,8 @@ a lie detection point of view, together with some useful descriptive plots of bl
 ## OpenCV and Facial Landmarks
 The implementation which follows is based on the tutorial from the blog Pyimagesearch (see Rosebrock) which, in turn, takes as its starting point the work of Soukupova and Cech for the the metric called eye aspect ratio (EAR). The 68 facial landmarks are based on the iBUG 300-W dataset (see Sagonas et al. and figure below), which the dlib facial landmark predictor was trained on.
 
-<img src="https://github.com/rmenoli/Eye-blinking-SVM/blob/master/images/facial_landmarks_68markup.jpg" width="700"/>
-<img src="https://github.com/rmenoli/Eye-blinking-SVM/blob/master/images/blink_detection_6_landmarks.jpg" width="700"/>
+<img src="https://github.com/rmenoli/Eye-blinking-SVM/blob/master/images/facial_landmarks_68markup.jpg" width="350"/>
+<img src="https://github.com/rmenoli/Eye-blinking-SVM/blob/master/images/blink_detection_6_landmarks.jpg" width="350"/>
 
 ## References
 - Adrian Rosebrock. Eye blink detection with opencv, python, and dlib. URL https://www.pyimagesearch.com/2017/04/24/eye-blink-detection-opencv-python-dlib/.
