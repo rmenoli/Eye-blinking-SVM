@@ -1,3 +1,10 @@
+# Intro
+This repo contians the code used to develop a blink detector based on an SVM model.
+Two examples of software's the output are available in the following video:
+ - First example: https://www.youtube.com/watch?v=6aDerndtoUc&t=64s
+ - Second example: https://www.youtube.com/watch?v=jd10kPrJ1sw&t=63s
+ 
+
 # Analysis of Lying through an Eye Blink Detection Algorithm
 Lie detection using physiological methods has been utilized for the past 75 years, starting with the work of Benussi, with varying rates of success in identification of the guilty.
 More recently, eye blink measures have attracted considerable attention, since they have been related to cognitive processes. They can be recorded easily without the subject’s awareness and without the application of electrodes.
@@ -47,6 +54,8 @@ Secondly, the validation procedure was done also for videos of friends, relative
 <img src="https://github.com/rmenoli/Eye-blinking-SVM/blob/master/images/Validation_Experiments.png" width="500"/>
 </p>
 
+Bianca's output video is available at: https://www.youtube.com/watch?v=6aDerndtoUc
+Filippo's output video is available at: https://www.youtube.com/watch?v=jd10kPrJ1sw&t=63s
 ## Is the Person Lying?
 In order to determine whether there could be some empirical measures (e.g. blink rate and EAR) which could be helpful for lie detection, at first, we built an interface containing the video, some descriptive statistics and two real-time plots. 
 
