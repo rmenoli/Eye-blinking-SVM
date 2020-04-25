@@ -54,8 +54,8 @@ Secondly, the validation procedure was done also for videos of friends, relative
 <img src="https://github.com/rmenoli/Eye-blinking-SVM/blob/master/images/Validation_Experiments.png" width="500"/>
 </p>
 
-Bianca's output video is available at: https://www.youtube.com/watch?v=6aDerndtoUc
-Filippo's output video is available at: https://www.youtube.com/watch?v=jd10kPrJ1sw&t=63s
+- Bianca's output video is available at: https://www.youtube.com/watch?v=6aDerndtoUc
+- Filippo's output video is available at: https://www.youtube.com/watch?v=jd10kPrJ1sw&t=63s
 ## Is the Person Lying?
 In order to determine whether there could be some empirical measures (e.g. blink rate and EAR) which could be helpful for lie detection, at first, we built an interface containing the video, some descriptive statistics and two real-time plots. 
 
