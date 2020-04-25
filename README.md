@@ -1,6 +1,6 @@
 # Intro
-This repo contians the code used to develop a blink detector based on an SVM model.
-Two examples of software's the output are available in the following video:
+This repo contains the code used to develop a blink detector based on an SVM model.
+Two examples of the software's output are available in the following video:
  - First example: https://www.youtube.com/watch?v=6aDerndtoUc&t=64s
  - Second example: https://www.youtube.com/watch?v=jd10kPrJ1sw&t=63s
  
